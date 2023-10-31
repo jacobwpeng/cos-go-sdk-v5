@@ -147,7 +147,8 @@ func (s *BucketService) IsExist(ctx context.Context) (bool, error) {
 type Bucket struct {
 	Name         string
 	Region       string `xml:"Location,omitempty"`
-	CreationDate string `xml:",omitempty"`
+	CreationDate string `xml:"CreateDate,omitempty"`
+	ACL          string `xml:"x-cos-acl,omitempty"`
 }
 
 type BucketGetObjectVersionsOptions struct {

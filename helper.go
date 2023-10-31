@@ -6,7 +6,6 @@ import (
 	"crypto/sha1"
 	"errors"
 	"fmt"
-	"github.com/mozillazg/go-httpheader"
 	"hash/crc64"
 	"io"
 	"net/http"
@@ -14,6 +13,8 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/mozillazg/go-httpheader"
 )
 
 // 单次上传文件最大为5GB
@@ -108,7 +109,7 @@ func encodeURIComponent(s string, excluded ...[]byte) string {
 		}
 
 		b.WriteString(s[written:i])
-		fmt.Fprintf(&b, "%%%02X", c)
+		fmt.Fprintf(&b, "%%%02x", c)
 		written = i + 1
 	}
 
