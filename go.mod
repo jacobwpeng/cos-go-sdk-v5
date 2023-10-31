@@ -1,4 +1,4 @@
-module github.com/tencentyun/cos-go-sdk-v5
+module github.com/jacobwpeng/cos-go-sdk-v5
 
 go 1.12
 
