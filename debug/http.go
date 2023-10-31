@@ -2,12 +2,13 @@ package debug
 
 import (
 	"fmt"
-	"github.com/tencentyun/cos-go-sdk-v5"
 	"io"
 	"net/http"
 	"net/http/httputil"
 	"os"
 	"regexp"
+
+	"github.com/jacobwpeng/cos-go-sdk-v5"
 )
 
 // DebugRequestTransport 会打印请求和响应信息, 方便调试.
